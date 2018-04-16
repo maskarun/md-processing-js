@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>FLIGHT SEARCH</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label color="primary" stacked>FROM</ion-label>
+          <ion-select [(ngModel)]="flight.fromPlace">
+            <ion-option *ngFor="let place of flight.place" value="{{place}}">{{place}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label color="primary" stacked>To</ion-label>
+          <ion-select [(ngModel)]="flight.toPlace">
+            <ion-option *ngFor="let place of flight.place" value="{{place}}">{{place}}</ion-option>
+          </ion-select>
+        </ion-item>      
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label color="primary" stacked>Departure</ion-label>
+          <ion-datetime displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="flight.departureDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label color="primary" stacked>Return</ion-label>
+          <ion-datetime displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="flight.returnDate"></ion-datetime>
+        </ion-item>      
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label color="primary" stacked>Adult</ion-label>
+            <ion-select [(ngModel)]="flight.adult">
+              <ion-option value="1">1</ion-option>
+              <ion-option value="2">2</ion-option>
+              <ion-option value="3">3</ion-option>
+              <ion-option value="4">4</ion-option>
+              <ion-option value="5">5</ion-option>
+            </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label color="primary" stacked>Child</ion-label>
+          <ion-select [(ngModel)]="flight.child">
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+          </ion-select>
+        </ion-item>      
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label color="primary" stacked>Class</ion-label>
+          <ion-select [(ngModel)]="flight.classType">
+            <ion-option value="Economy Class">Economy Class</ion-option>
+            <ion-option value="Premium Economy">Premium Economy</ion-option>
+            <ion-option value="Business Class">Business Class</ion-option>
+          </ion-select>
+        </ion-item>      
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button block (click)="bookNow()">Book Now</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

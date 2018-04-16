@@ -1,0 +1,50 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>REGISTER</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-item>
+    	<ion-label color="primary" floating>NAME</ion-label>
+    	<ion-input type="text" [(ngModel)]="user.name"></ion-input>
+  	</ion-item>
+  	<ion-item>
+    	<ion-label color="primary" floating>MOBILE NUMBER</ion-label>
+    	<ion-input type="text" [(ngModel)]="user.username"></ion-input>
+  	</ion-item>
+  	<ion-item>
+		<ion-label>GENDER</ion-label>
+		<ion-select [(ngModel)]="user.gender">
+			<ion-option value="Female">Female</ion-option>
+			<ion-option value="Male">Male</ion-option>
+		</ion-select>
+	</ion-item>
+	<ion-item>
+		<ion-label>DATE OF BIRTH</ion-label>
+		<ion-datetime displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="user.dateOfBirth"></ion-datetime>
+	</ion-item>
+  	<ion-item>
+    	<ion-label color="primary" floating>EMAIL</ion-label>
+    	<ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  	</ion-item>
+  	<ion-item>
+    	<ion-label color="primary" floating>PASSWORD</ion-label>
+    	<ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  	</ion-item>
+  	<ion-item>
+    	<ion-label color="primary" floating>CONFIRM PASSWORD</ion-label>
+    	<ion-input type="password" [(ngModel)]="confirmPassword"></ion-input>
+  	</ion-item>
+  	<ion-row>
+        <ion-col width-50>
+  			<button ion-button block (click)="register()">REGISTER</button>
+  		</ion-col>
+  	</ion-row>
+</ion-content>

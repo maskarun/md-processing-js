@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ResturantPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>RESTAURANTS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let rest of restaurant ">
+  <!--  <img src="img/advance-card-map-madison.png"> -->
+    <ion-item text-wrap>
+      <ion-icon name="restaurant" item-start large></ion-icon>
+      <h2 style="color: green;font-weight: bold;">{{rest.name}}</h2>
+      <p style="font-style: italic;">{{rest.address}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <p item-left>Hours : Opens @ {{rest.startHour}} - Closes @ {{rest.stopHour}}</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngIf="!(restaurant?.length > 0)">
+    <ion-item text-wrap>
+      <h2 style="color: red; font-style: italic;font-weight: bold;">Cannot find the restaurant info. Please use different search criteria.</h2>
+    </ion-item>
+  </ion-card>
+</ion-content>

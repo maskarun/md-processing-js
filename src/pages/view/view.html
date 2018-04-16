@@ -1,0 +1,42 @@
+<!--
+  Generated template for the ViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>VIEW</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+	<ion-card>
+		<ion-card-content>
+		  <ion-card-title>{{flight.fromPlace}} - {{flight.toPlace}}</ion-card-title>
+		  <p>Adult - {{flight.adult}}  : Child - {{flight.child}}  : Type - {{flight.classType}}</p>
+		</ion-card-content>
+	</ion-card>
+  
+  	<ion-card>
+		<ion-item text-wrap (click)="restaurantType()">
+			<span style="color: red;">Click Here</span>, To explore Nearby Resturants/Cafes by answering this simple question.
+		</ion-item>
+
+	<!--	<ion-list>
+			<button ion-item (click)="restaurantType('dining')">
+				<ion-icon name="beer" item-start></ion-icon>Dining
+			</button>
+			<button ion-item (click)="restaurantType('cafe')">
+				<ion-icon name="cafe" item-start></ion-icon>Cafe
+			</button>
+			<button ion-item (click)="restaurantType('pub')">
+				<ion-icon name="beer" item-start></ion-icon>Pub
+			</button>
+		</ion-list> -->
+  	</ion-card> 
+</ion-content>
+
+
